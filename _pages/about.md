@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: M.S. student in Machine Learning
+subtitle: M.S. student majoring Machine Learning
 
 profile:
-  align: right
-  image: yunhak.jpg
+  align: left
+  image: sukwon.jpg
   # address: >
   #   <p>555 your office number</p>
   #   <p>123 your address street</p>
@@ -18,16 +18,15 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi I'm Yunhak Oh! 👋
+Hi I'm Sukwon Yun! 👋
 
-I'm a current master's degree candidate for Industrial & System Engineering at Korea Advanced Institute of Science and Technology (KAIST),
+Currently, I'm a master's degree candidate for Industrial & System Engineering at KAIST (Korea Advanced Institute of Science and Technology),
 where I am fortunate to be advised by [Prof. Chanyoung Park](http://dsail.kaist.ac.kr/professor/).
 
-I'm actively on research with my best colleagues at [Data Science and Artificial Intelligence Lab](http://dsail.kaist.ac.kr/).
+I'm actively on research with my best teamates at [DSAIL@KAIST](http://dsail.kaist.ac.kr/).
 
-My research interest is mainly on anything connected to or can be represented as graphs!
+My research interest mainly lies on `Weakness of Graph Neural Networks`  
 
-- Graph Neural Networks (GNNs)
-- Continual Learning
-- Neural ODEs
-- General Machine Learning and Data Mining
+- Long-Tailedness (Everything, literally *everything* is long-tailed!)
+- Oversmoothing (Is 2 or 3 layers enough?)
+- Heterophily (Real world graphs do not always follow homophily assumptions!)
