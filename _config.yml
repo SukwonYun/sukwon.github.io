@@ -92,7 +92,7 @@ pagination:
   enabled: true
 
 # Comments
-disqus_shortname: sukwon-github-io # put your disqus shortname
+disqus_shortname: sukwonyun-github-io # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # # External sources.
