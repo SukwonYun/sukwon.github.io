@@ -20,7 +20,7 @@ social: true  # includes social icons at the bottom of the page
 
 Hi I'm Sukwon Yun! 👋
 
-Currently, I'm a Master's degree candidate for Industrial & System Engineering at KAIST (Korea Advanced Institute of Science and Technology),
+Currently, I'm a Master's degree candidate for Industrial & Systems Engineering at KAIST (Korea Advanced Institute of Science and Technology),
 where I am fortunate to be advised by [Prof. Chanyoung Park](http://dsail.kaist.ac.kr/professor/).
 
 I'm actively on research with my best teammates at [DSAIL@KAIST](http://dsail.kaist.ac.kr/).
