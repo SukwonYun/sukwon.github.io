@@ -72,8 +72,9 @@ dblp_url: # your DBLP profile url
 stackoverflow_id: #your stackoverflow id
 contact_note: >
   Please send am e-mail or message via Linkedin.
+
 google_analytics: G-F492QWZL6M # your google-analytics ID (format: UA-XXXXXXXXX)
-google_site_verification: 8dF5AVxx91T6rroTsiiV2HnjXPROjcEtwR2HDYL71GM # your google-site-verification ID (Google Search Console)
+google_site_verification: TkArZm4MeKRFkUcyKa2LgpQd-i5-YPtnjtzbYgMf59M # 8dF5AVxx91T6rroTsiiV2HnjXPROjcEtwR2HDYL71GM # your google-site-verification ID (Google Search Console)
 bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 
