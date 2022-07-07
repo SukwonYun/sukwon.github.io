@@ -29,4 +29,4 @@ My research interest lies primarily in ***Weakness* of Graph Neural Networks**.
 
 - ``Long-Tailedness`` (Everything, literally *everything* is long-tailed!)
 - ``Oversmoothing`` (Is 2 or 3 layers enough?)
-- ``Heterophily`` (Real-world graphs are not always homophilious!)
+- ``Heterophily`` (Real-world graphs are not always homophilous!)
