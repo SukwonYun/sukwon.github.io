@@ -6,7 +6,7 @@ subtitle: M.S. student majoring Machine Learning
 
 profile:
   align: right
-  image: sukwon_atlanta1.jpg
+  image: sukwon_atlanta2.jpg
   # address: >
   #   <p>555 your office number</p>
   #   <p>123 your address street</p>
