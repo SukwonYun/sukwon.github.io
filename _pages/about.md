@@ -6,7 +6,7 @@ subtitle: M.S. student majoring Machine Learning
 
 profile:
   align: right
-  image: sukwon.jpg
+  image: sukwon_atlanta1.jpg
   # address: >
   #   <p>555 your office number</p>
   #   <p>123 your address street</p>
@@ -30,3 +30,4 @@ My research interest lies primarily in ***Weakness* of Graph Neural Networks**.
 - ``Long-Tailedness`` (Everything, literally *everything* is long-tailed!)
 - ``Oversmoothing`` (Is 2 or 3 layers enough?)
 - ``Heterophily`` (Real-world graphs are not always homophilous!)
+- ``Missing Features`` (In real-world, only partial features are available!)
