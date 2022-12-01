@@ -28,6 +28,6 @@ I'm actively on research with my best teammates at [DSAIL@KAIST](http://dsail.ka
 My research interest lies primarily in ***Weakness* of Graph Neural Networks**.
 
 - ``Long-Tailedness`` (Everything, literally *everything* is long-tailed!)
-- ``Oversmoothing`` (Is 2 or 3 layers enough?)
 - ``Heterophily`` (Real-world graphs are not always homophilous!)
+- ``Oversmoothing`` (Is 2 or 3 layers enough?)
 - ``Missing Features`` (In real-world, only partial features are available!)
