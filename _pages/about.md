@@ -25,9 +25,9 @@ where I am fortunate to be advised by [Prof. Chanyoung Park](http://dsail.kaist.
 
 I'm actively on research with my best teammates at [DSAIL@KAIST](http://dsail.kaist.ac.kr/).
 
-My research interest lies primarily in **Graph Neural Networks in *<span style='background-color:#fff5b1'>real-world scenarios</span>* and their fundamental *<span style='background-color:#dcffe4'>weakness</span>***.
+My research interest lies primarily in **Graph Neural Networks in *<span style='background-color:#fff5b1'>real-world scenarios</span>* and their fundamental *<span style='background-color:#F7DDBE'>weakness</span>***.
 
-- <span style='background-color:#fff5b1'>Long-Tailedness</span> (Everything, literally *everything* is long-tailed!)
-- <span style='background-color:#fff5b1'>Missing Features</span> (In real-world, only partial features are available!)
-- <span style='background-color:#dcffe4'>Heterophily</span> (Real-world graphs are not always homophilous!)
-- <span style='background-color:#dcffe4'>Oversmoothing</span> (Is 2 or 3 layers enough?)
+- <span style='background-color:#fff5b1'>**Long-Tailedness**</span> (Everything, literally *everything* is long-tailed!)
+- <span style='background-color:#fff5b1'>**Missing Features**</span> (In real-world, only partial features are available!)
+- <span style='background-color:#F7DDBE'>**Heterophily**</span> (Real-world graphs are not always homophilous!)
+- <span style='background-color:#F7DDBE'>**Oversmoothing**</span> (Is 2 or 3 layers enough?)
