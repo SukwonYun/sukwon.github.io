@@ -22,8 +22,7 @@ I am a master's student in the [Data Science and Artificial Intelligence Lab (DS
 
 During my master's year, I had a memorable experience in Tokyo as a visiting researcher at the [Murata Lab](http://www.net.c.titech.ac.jp/index.html) in [Tokyo Tech](https://www.titech.ac.jp/english), under the guidance of [Prof. Tsoyoshi Murata](http://www.net.c.titech.ac.jp/murata.html). I also had the opportunity to collaborate closely with [Dr. Xin Liu](https://staff.aist.go.jp/xin.liu/).
 
-In a nutshell, my research interest lies primarily in **Graph Neural Networks** with their **real-world applications**.<br>
-I am interested in <u>mitigating the inductive bias of Graph Neural Networks (GNNs)</u> in real-world scenarios, with their <u>application in the field of Bioinformatics</u>, particularly single-cell RNA sequencing. Keywords include but are not limited to the following:
+In a nutshell, my research interest lies primarily in **Graph Neural Networks** with their **real-world applications**. I am interested in <u>mitigating the inductive bias of Graph Neural Networks (GNNs)</u> in real-world scenarios, with their <u>application in the field of Bioinformatics</u>, particularly single-cell RNA sequencing. Keywords include but are not limited to the following:
 
 - Long-Tail Problem on Graphs
 - Missing Features on Graphs
