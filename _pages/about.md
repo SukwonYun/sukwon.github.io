@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: M.S. student majoring Machine Learning
+subtitle: M.S. student in Industrial & Systems Engineering
 
 profile:
   align: right
@@ -18,16 +18,24 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi I'm Sukwon Yun! 👋
+I am a master's student in the [Data Science and Artificial Intelligence Lab (DSAIL)](http://dsail.kaist.ac.kr) at [KAIST](https://www.kaist.ac.kr/en/), where I am fortunate to be advised by [Prof. Chanyoung Park](http://dsail.kaist.ac.kr/professor/).
 
-Currently, I'm a Master's degree candidate for Industrial & Systems Engineering at KAIST (Korea Advanced Institute of Science and Technology),
-where I am fortunate to be advised by [Prof. Chanyoung Park](http://dsail.kaist.ac.kr/professor/).
+During my master's year, I had a memorable experience in Tokyo as a visiting researcher at the [Murata Lab](http://www.net.c.titech.ac.jp/index.html) in [Tokyo Tech](https://www.titech.ac.jp/english), under the guidance of [Prof. Tsoyoshi Murata](http://www.net.c.titech.ac.jp/murata.html). I also had the opportunity to collaborate closely with [Dr. Xin Liu](https://staff.aist.go.jp/xin.liu/).
 
-I'm actively on research with my best teammates at [DSAIL@KAIST](http://dsail.kaist.ac.kr/).
+In a nutshell, my research interest lies primarily in **Graph Neural Networks** with their **real-world applications**.<br>
+I am interested in <u>mitigating the inductive bias of Graph Neural Networks (GNNs)</u> in real-world scenarios, with their <u>application in the field of Bioinformatics</u>, particularly single-cell RNA sequencing. Keywords include but are not limited to the following:
 
-My research interest lies primarily in ***Graph Neural Networks* in <span style='background-color:#fff5b1'>real-world scenarios</span> and their fundamental <span style='background-color:#F7DDBE'>weakness</span>**.
+- Long-Tail Problem on Graphs
+- Missing Features on Graphs
+- Heterophily on Graphs
+- Data Sparsity (Dropout) on scRNA-seq data
 
-- <span style='background-color:#fff5b1'>**Long-Tailedness**</span> (Everything, literally *everything* is long-tailed!)
+<!-- 
+My research interest lies primarily in ***Graph Neural Networks* in <span style='background-color:#fff5b1'>real-world scenarios</span> and their fundamental <span style='background-color:#F7DDBE'>weakness</span>**. -->
+
+<!-- - <span style='background-color:#fff5b1'>**Long-Tailedness**</span> (Everything, literally *everything* is long-tailed!)
 - <span style='background-color:#fff5b1'>**Missing Features**</span> (In real-world, only partial features are available!)
 - <span style='background-color:#F7DDBE'>**Heterophily**</span> (Real-world graphs are not always homophilous!)
-- <span style='background-color:#F7DDBE'>**Oversmoothing**</span> (Is 2 or 3 layers enough?)
+- <span style='background-color:#F7DDBE'>**Oversmoothing**</span> (Is 2 or 3 layers enough?) -->
+
+
