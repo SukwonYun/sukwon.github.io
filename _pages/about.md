@@ -6,7 +6,7 @@ subtitle: M.S. student in Industrial & Systems Engineering
 
 profile:
   align: right
-  image: sukwon_atlanta2.jpg
+  image: sukwon_atlanta1.jpg
   # address: >
   #   <p>555 your office number</p>
   #   <p>123 your address street</p>
