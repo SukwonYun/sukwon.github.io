@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: M.S. student in Industrial & Systems Engineering
+subtitle: M.S. in Industrial & Systems Engineering
 
 profile:
   align: right
@@ -18,9 +18,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a master's student in the [Data Science and Artificial Intelligence Lab (DSAIL)](http://dsail.kaist.ac.kr) at [KAIST](https://www.kaist.ac.kr/en/), where I am fortunate to be advised by [Prof. Chanyoung Park](http://dsail.kaist.ac.kr/professor/).
+I am a researcher at [Data Science and Artificial Intelligence Lab (DSAIL)](http://dsail.kaist.ac.kr) at [KAIST](https://www.kaist.ac.kr/en/), where I am fortunate to be advised by [Prof. Chanyoung Park](http://dsail.kaist.ac.kr/professor/) during my Master's.  
 
-During my master's year, I had a memorable experience in Tokyo as a visiting researcher at the [Murata Lab](http://www.net.c.titech.ac.jp/index.html) in [Tokyo Tech](https://www.titech.ac.jp/english), under the guidance of [Prof. Tsoyoshi Murata](http://www.net.c.titech.ac.jp/murata.html). I also had the opportunity to collaborate closely with [Dr. Xin Liu](https://staff.aist.go.jp/xin.liu/).
+During my Master's year, I had a memorable experience in Tokyo as a visiting researcher at the [Murata Lab](http://www.net.c.titech.ac.jp/index.html) in [Tokyo Tech](https://www.titech.ac.jp/english), under the guidance of [Prof. Tsoyoshi Murata](http://www.net.c.titech.ac.jp/murata.html). I also had the opportunity to collaborate closely with [Dr. Xin Liu](https://staff.aist.go.jp/xin.liu/).
 
 In a nutshell, my research interest lies primarily in **Graph Neural Networks** with their **real-world applications**. I am interested in <u>mitigating the inductive bias of Graph Neural Networks (GNNs)</u> in real-world scenarios, with their <u>application in the field of Computational Biology</u>, particularly single-cell RNA sequencing. Keywords include but are not limited to the following:
 
