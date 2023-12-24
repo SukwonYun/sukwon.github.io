@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!-- _layouts/distill.html -->
+<html>
+  <head>    <!-- Metadata, OpenGraph and Schema.org -->
+    
+    <!-- Website verification -->
+    <meta name="google-site-verification" content="TkArZm4MeKRFkUcyKa2LgpQd-i5-YPtnjtzbYgMf59M" />
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sukwon  Yun | [그래프] Graph Neural Ordinary Differential Equations</title>
+    <meta name="author" content="Sukwon  Yun" />
+    <meta name="description" content="Michael Poli, Stefano Massaroli / Graph Neural Ordinary Differential Equations / AAAI(DLGMA)-2020" />
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous" />
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="none" id="highlight_theme_light" />
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="/assets/img/firstpenguin.jpeg"/>
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://sukwonyun.github.io/blog/2022/GDE/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark" />
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <!-- Distill js -->
+    <script src="/assets/js/distillpub/template.v2.js"></script>
+    <script src="/assets/js/distillpub/transforms.v2.js"></script>
+    
+  </head>
+
+  <d-front-matter>
+    <script async type="text/json">{
+      "title": "[그래프] Graph Neural Ordinary Differential Equations",
+      "description": "Michael Poli, Stefano Massaroli / Graph Neural Ordinary Differential Equations / AAAI(DLGMA)-2020",
+      "published": "April 25, 2022",
+      "authors": [
+        
+      ],
+      "katex": {
+        "delimiters": [
+          {
+            "left": "$",
+            "right": "$",
+            "display": false
+          },
+          {
+            "left": "$$",
+            "right": "$$",
+            "display": true
+          }
+        ]
+      }
+    }</script>
+  </d-front-matter>
+
+  <body class="fixed-top-nav">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="https://sukwonyun.github.io/"><span class="font-weight-bold">Sukwon</span>   Yun</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">About</a>
+              </li>
+              
+              <!-- Blog
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">Blog</a>
+              </li> -->
+              <!-- CV -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/assets/pdf/CV_Sukwon_Yun_1224.pdf">CV
+                </a>
+              </li>
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">Publications</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <div class="toggle-container">
+                <a id="light-toggle">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </a>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <div class="post distill">
+
+      <d-title>
+        <h1>[그래프] Graph Neural Ordinary Differential Equations</h1>
+        <p>Michael Poli, Stefano Massaroli / Graph Neural Ordinary Differential Equations / AAAI(DLGMA)-2020  ·  <a href="#disqus_thread"><span style="font-size:75%">Post a Comment</span></a></p>
+      </d-title>
+      
+      <d-byline></d-byline>
+
+      <d-article>
+        <d-contents>
+          <nav class="l-text figcaption">
+          <h3>Contents</h3>
+            
+          </nav>
+        </d-contents>
+
+        <h1 id="gde">GDE</h1>
+
+<h2 id="1-problem-definition"><strong>1. Problem Definition</strong></h2>
+
+<blockquote>
+  <p>Appropriate Relational Inductive Bias on GNN in terms of Continuous Domain !</p>
+</blockquote>
+
+<p>적절한 <code class="language-plaintext highlighter-rouge">Inductive Bias</code> 를 부여하는 것은 딥러닝 모델에서 아주 중요한 요소로 부각된다. 이때, 우리는 Inductive bias가 무엇인지 조금 더 엄밀하게 짚고 넘어가야할 필요가 있다. Inductive Bias는 모델이 unseen data에 대해서 더욱 잘 예측하기 위해 우리가 도입하는 <em>추가적인 가정</em> 으로 이해하면 좋다. 이 중에서도 Relational Inductive Bias는 이름 그대로 모델을 이루는 entities 간의 relationship 에 대해 우리가 부여하는 추가적인 가정으로 이해할 수 있다. 대표적으로, MLP와 CNN을 비교해보면, MLP는 하나의 인풋이 모든 아웃풋에 관여하지만 인풋 간의 관계성은 등한시되는 반면 CNN은 convolution filter가 window sliding을 하며 업데이트를 이어나가게 되고 이를 바탕으로 local한 인풋은 서로 weight sharing을 하는, 서로 관계가 비슷할 것이라는 가정이 들어가게 된다. 즉, Relational Inductive Biase 측면에서 MLP는 Weak한 반면 CNN은 Local내에서 Strong하다고 볼 수 있다. 이 관점에서, <strong>Relational Inductive Bias</strong>는 <strong>Weight Sharing</strong>과 대응되는 개념으로 바라볼 수 있게 된다.</p>
+
+<p>그렇다면, 이제 본론으로 넘어와서 우리가 현재 포커싱하고 있는 <code class="language-plaintext highlighter-rouge">Graph Neural Network</code> 관점에서 바라보면 어떠한가? GNN은 node와 edge를 바탕으로 한 그래프 자료구조에서 딥러닝을 접목시켰기 때문에 Relation은 직관적으로 edge를 바탕으로 이뤄지고 있음을 알 수 있다. 이때, Relational Inductive Bias는 정형화되지 않은, arbitrary한 특성을 가지고 있다. 이는 GNN에서는 특정 두 노드를 기준으로 엣지가 정의되고 있는 본질적인 성질 때문이다. 예를 들어보자면, 전 세계 대학원생의 그래프를 만들어본다고 했을 때, 각 국가를 라벨로 가지고 노드는 해당 대학원생의 특성으로 정의된다고 해보자. 이때, 두 대학원생을 이어주는 엣지는 취미생활이 같은 경우(e.g., 축구)라고 하면 한국 내에서 대학원생 김 모군 - 박 모군 의 관계도 있을 것이고 미국에서 John - Andrew 의 관계도 있을 것이다. 두 Pair(김-박, John-Andrew)는 그래프 내에서 local하지는 않아도 관계는 일치하기 때문에 비슷한 weight를 share할 가능성도 크다. 이러한 경우가 바로 aribitrary한 Relational Inductive Bias를 갖는 경우로 볼 수 있다. 앞선 두 문단을 하나의 사진으로 요약하면 아래와 같다.</p>
+
+<center><img src="https://user-images.githubusercontent.com/68312164/174891532-03f87ad7-898b-4c18-b0fa-f0f66cd36f54.png" width="600" height="300"></center>
+
+<p>우리가 오늘 특히 집중할 Inductive Bias는 시스템 내 데이터를 바탕으로 한 <code class="language-plaintext highlighter-rouge">Temporal Behavior</code>, 즉 시간에 따른 행동양상이다. 앞서 우리는 inductive bias를 <em>추가적인 가정</em> 에 대응되는 개념이라고 했다. 즉, 현재 경우에 접목시켜보면 우리의 추가적인 가정은, 시간에 변화 따라 시스템의 dynamics이 <strong>discrete</strong>한 지, <strong>continuous</strong>인지 등의 가정을 부여해줄 수 있다. 이 중, 특히 신경망을 연속적인 layer의 구조로 표현하는 관점 그리고 <em>상미분방정식(ODE)의 초기값 문제의 해</em> 를 통해 이를 업데이트 하는 과정은 최근 딥러닝 모델로 하여금 새로운 패러다임을 제안했다고 볼 수 있다.</p>
+
+<p>이러한 흐름 즉, GNN관점에서 Temporal Behavior 측면 상 적절한 Inductive Bias를 부여하기 위해 해당 paper는 아래 3가지의 문제에 접근하고자 한다.</p>
+
+<ol>
+  <li>
+<strong>Blending graphs and differential equtations</strong>
+    <ul>
+      <li>상미분방정식(ODE)을 GNN으로 parameterize하고 system-theoretic한 framework, <strong>Graph neural Ordinary Differential Euqations, GDE</strong>를 제안하고자 한다. 이때 GDE는 ODE를 바탕으로 한 연속적인 관점, 그리고 GNN의 본질적인 Reltaional Inductive bias를 내포한 체로 디자인된다는 특징점을 가진다. 이러한 GDE는 효과성은 semi-supervised의 node classification task와 spatio-temporal foecasting task에서 실험적으로 입증한다.</li>
+    </ul>
+  </li>
+  <li>
+<strong>Sequence of graphs</strong>
+    <ul>
+      <li>GDE의 framework를 spati-temporal 세팅으로 가저간 뒤, hybrid dynamical system관점에서 일반적인 autoregressive(자가회귀모형)으로 모델링한다. 이때, autoregressive GDE는 ODE의 적분 구간을 변경해줌으로써, irregular한 데이터 관측에서도 잘 대응할 수 있게 해준다.</li>
+    </ul>
+  </li>
+  <li>
+<strong>GDEs as general-purpose models</strong>
+    <ul>
+      <li>특히, GDE는 연속적인 환경에서 GDE를 효과적이게 모델링하기 위한 별도의 assumption, 가정이 불필요하다는 장점을 가진다. 즉, 범용적인 측면에서 높은 성능을 내고 효과적임을 실험적으로 입증한다.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="2-motivation"><strong>2. Motivation</strong></h2>
+
+<blockquote>
+  <p>GNN + Neural ODE = Continuous GNN !</p>
+</blockquote>
+
+<p>이 Paper에서 기존의 GNN이 가지는 discrete한 모델링의 한계를 극복하고자 한다. 즉, continuous한 <code class="language-plaintext highlighter-rouge">Graph Neural Network</code>을 모델링해보고자 함이다. 무엇을 통해? 바로 NeurIPS 2018 best paper로 선정된 <strong>Neural Ordinary Differential Equations</strong> 에서 제안된 신경망을 미분방정식의 해로 바라보는 관점을 통해. 앞선 두 문장에서 유추할 수 있듯, 우리는 두 가지 key concept을 먼저 이해하고 본격적인 GDE의 모델링 측면으로 넘어가고자 한다.</p>
+
+<h3 id="1-graph-neural-network">(1) Graph Neural Network</h3>
+
+<ul>
+  <li>먼저, GNN을 이해할 필요가 있는데, 이 중 가장 대표적인 <code class="language-plaintext highlighter-rouge">GCN(Graph Convolutional Networks)</code>을 간단히 설명해보고자 한다. 기존의 딥러닝 분야(e.g., CNN)과 달리 GNN은 non-euclidean space에서 정의되고 feature들이 독립적이지 않다는 속성을 key motivation으로 삼아 발전한, Graph 자료구조에 신경망을 접목시킨 모델이라고 이해할 수 있다. 그 중, GCN은 이름에서 유추할 수 있듯, CNN에서의 Convolution 연산을 그래프 자료구조에 접목시킨 대표적인 모델이다. Graph에서 Convolution을 적용하기 위한 과정으로는 퓨리에 변환(Signal을 Frequency로 변환하는 과정)이 필수적으로 수반되게 되고 이때 우리는 Signal을 node의 label, Frequency를 중심노드와 이웃노드의 차이로 대응할 수 있게 된다. 핵심은, 우리는 이러한 중심노드와 이웃노드의 차이가 적기를 바라며, 이러한 <strong>이웃노드들로부터 자신의 노드를 업데이트하는 과정</strong> 이 바로 GCN의 본질이라는 것이다. 이에 대한 더욱 자세한 설명은 해당 페이지에서 GCN에 대한 PDF를 참고하면 도움이 된다. <a href="https://github.com/SukwonYun/GNN-Papers" target="_blank" rel="noopener noreferrer">https://github.com/SukwonYun/GNN-Papers</a>
+</li>
+</ul>
+
+<center><img src="https://user-images.githubusercontent.com/68312164/174891529-fe078794-106b-45a4-a85f-554957103e89.png" width="600" height="300"></center>
+
+<ul>
+  <li>수식을 통해 이해해보면 아래와 같이 설명할 수 있다. 이때, <img src="https://latex.codecogs.com/svg.image?%5Cmathbf%7Bh\_v%5E%7Bl%7D%7D" alt="">은 <img src="https://latex.codecogs.com/svg.image?l" alt="">번째 레이어에서 노드 <img src="https://latex.codecogs.com/svg.image?v" alt="">의 hidden representation 이고 <img src="https://latex.codecogs.com/svg.image?%5Cmathcal%7BN%7D\_v" alt="">는 노드 <img src="https://latex.codecogs.com/svg.image?v" alt="">의 이웃노드들의 집합이다. 수식에서 보듯 자기자신의 representation을 업데이트하는 과정에서 이웃노드들의 representation을 바탕으로 한다는 것이 GNN의 핵심이다. GCN은 이 중에서도 Laplacian 연산(i.e.,<img src="https://latex.codecogs.com/svg.image?%5Cmathbf%7B%5Chat%7BD%7D%7D%5E%7B-1/2%7D%5Cmathbf%7B%5Chat%7BA%7D%7D%5Cmathbf%7B%5Chat%7BD%7D%7D%5E%7B-1/2%7D" alt="">)을 통해 자기자신과 이웃노드들의 representation 평균 합으로 AGGREGATE하는 GNN으로 이해하면 된다. 이때, <img src="https://latex.codecogs.com/svg.image?%5Cmathbf%7BW%7D%5E%7B\(l-1\)%7D" alt="">은 <img src="https://latex.codecogs.com/svg.image?l-1" alt="">번 째 layer에서 업데이트 대상이 되는 파라미터이다.</li>
+</ul>
+
+\[\begin{equation} \mathbf{h}_{v}^{(l)}=\text{COMBINE}^{(l)}\left(\mathbf{h}_{v}^{(l-1)}, \text{AGGREGATE}^{(l-1)}\left(\left\{\mathbf{h}_{u}^{(l-1)}: u \in \mathcal{N}(v)\right\}\right)\right) \end{equation}\]
+
+\[\begin{equation} \mathbf{H}^{(l)} = \sigma(\mathbf{\hat{D}}^{-1/2}\mathbf{\hat{A}}\mathbf{\hat{D}}^{-1/2}\mathbf{H}^{(l-1)}\mathbf{W}^{(l-1)}) \end{equation}\]
+
+<h3 id="2-nerual-ode">(2) Nerual ODE</h3>
+
+<ul>
+  <li>2018년 발표된 Neural Ordinary Differential Equations는 <code class="language-plaintext highlighter-rouge">Neural Network를 Continuous Domain</code>에서 바라볼 수 있게 한, 새로운 패러다임을 제안한 논문으로 평가되고 있다. 사실 이 논문의 key contribution은 신경망을 미분방정식의 해로 표현하는 그 주춧돌 역할을 제안했다기 보다는, Backward pass를 adjoint sensitivity method를 도입하므로써 gradient를 아주 효과적으로 구할 수 있게 해준데 있다. 먼저, 어떻게 discrete했던 기존의 신경망을 continuous하게 바라볼 수 있게 되었는지 <code class="language-plaintext highlighter-rouge">ResNet</code>을 통해 간단히 intuition을 살펴보고자 한다. 핵심은 ResNet에서 비롯된 residual connection을 좌변으로 넘겨서 1이었던 변화량을 generalize하여 미분의 관점으로 바라보는 것이다. 이로써, discrete했던 layer의 index 혹은 timestamp, <img src="https://latex.codecogs.com/svg.image?t" alt="">를 하나의 variable로 모델링할 수 있어진다. 이는 아래의 식과 같이 나타낼 수 있고 이러한 변화를 통해 Residual Network와 ODE Network의 Depth별 gradient의 흐름, hidden state의 업데이트 과정을 아래와 같이 이미지화 할 수 있다.</li>
+</ul>
+
+\[\begin{equation} \begin{aligned} \mathbf{h}_{t+1} = f(\mathbf{h}_{t}, \theta_t) + \mathbf{h}_{t} \\ \mathbf{h}_{t+1} - \mathbf{h}_{t} = f(\mathbf{h}_{t}, \theta_t) \\ \frac{\mathbf{h}_{t+\Delta} - \mathbf{h}_{t}}{\Delta}|_{\Delta=1} = f(\mathbf{h}_{t}, \theta_t) \\ \lim_{\Delta \rightarrow 0} \frac{\mathbf{h}_{t+\Delta} - \mathbf{h}_{t}}{\Delta} = f(\mathbf{h}_{t}, \theta_t) \\ \frac{d\mathbf{h}(t)}{dt} =f(\mathbf{h}(t),t,\theta) \\ \end{aligned} \end{equation}\]
+
+<center><img src="https://user-images.githubusercontent.com/68312164/174891533-0285fb3f-1aae-4694-b1dd-cef5453082cd.png" width="550" height="300"></center>
+
+<ul>
+  <li>
+    <p>이러한 intuition을 바탕으로 2018년 Neural ODE는 Backward Pass에 <code class="language-plaintext highlighter-rouge">Adjoint Sensitivity Method</code>를 접목시켜서 parameter를 업데이트 시키는 과정에서 gradient를 훨씬 효과적으로 구해낼 수 있게 하였고 이는 연구자들로 하여금 새로운 출발점을 알린 획기적인 시점이 되었다. Forward Method와 대비되는 Adjoint Sensitivity Method는 과연 무엇인지 아래 슬라이드 두개로 대체하고자 한다. 간단히 요약하자면, 초기값 문제를 풀고 Loss를 정의하여 parameter를 업데이트하는 과정에서 time dependent solution function에 대한 parameter 변화량(i.e., <img src="https://latex.codecogs.com/svg.image?%5Cfrac%7Bd%5Ctextbf%7Bu%7D%7D%7Bd%5Cboldsymbol%7B%5Ctheta%7D%7D" alt="">을 구해야하는데 이를 구하기가 상당히 수고스러운 일이었다. 이에 비해 Adjoint Sensitivity Method는 이를 직접적으로 구하지 않고 Optimization 문제로 치환하여 Lagrangian을 도입하고 앞선 변화량(i.e., <img src="https://latex.codecogs.com/svg.image?%5Cfrac%7Bd%5Ctextbf%7Bu%7D%7D%7Bd%5Cboldsymbol%7B%5Ctheta%7D%7D" alt="">의 계수들을 0으로 만드는 별도의 초기값 문제를 하나 더 제안하여, 총 2개의 ODE를 푸는 것만으로 파라미터를 업데이트 하는 방법론이다.구체화 된 과정은 아래 슬라이드와 같이 나타낼 수 있다.
+<img src="https://user-images.githubusercontent.com/68312164/174891526-1821cca7-6f6d-42f1-8f80-de16825d087f.png" width="340" height="250"><img src="https://user-images.githubusercontent.com/68312164/174891467-258b42e8-b533-45a1-81b2-4ec54a41d46c.png" width="340" height="250"></p>
+  </li>
+  <li>
+    <p>이러한 Neural ODE는 기존의 딥러닝 모델과 같이 gradient를 직접적으로 구하는 것이 아닌 <code class="language-plaintext highlighter-rouge">gradient를 mimic하는 과정</code>으로 볼 수 있기에 별도의 gradient를 저장할 필요가 없어진다. 따라서, <strong>memory efficient</strong>하다는 장점, timestamp에 종속적이었던 시간 <img src="https://latex.codecogs.com/svg.image?t" alt="">를 별도의 변수로 모델링하여 <strong>구간 내의 dynamics를 하나의 함수로 모델링</strong> 할 수 있다는 장점, <strong>irregular한 time에 대한 대응</strong>, 그 간 <strong>수리적으로 입증되었던 미분방정식 풀이법을 딥러닝에 접목</strong> 시킬 수 있다는 장점 등 다수의 매력을 내포한 체 딥러닝에 새로운 패러다임을 제안하게 되었다.</p>
+  </li>
+</ul>
+
+<h2 id="3-method"><strong>3. Method</strong></h2>
+
+<p>본격적으로 Method로 들어가고자 한다. 앞선 Motivation이 어느정도 구체적이었고 길었던 이유는 바로 오늘의 Graph neural ordinary Differential Euqations, GDE가 결과적으로 <code class="language-plaintext highlighter-rouge">GNN과 Neural ODE를 접목시킨 퍼스트 펭귄의 역할을 하는 paper</code>로 볼 수 있기 때문이다. 먼저 순서는 GDE에 대한 definition, Static Model에서의 GDE, Spatio-Temporal Model에서의 GDE순으로 이번 파트를 설명하고자 한다.</p>
+
+<h3 id="1-definition-of-gde">(1) <strong>Definition of GDE</strong>
+</h3>
+
+<p>먼저 기존의 resiudal connection이 추가된 기존의 GNN이 업데이트되는 방식을 살펴보면 아래와 같이 나타낼 수 있다. 이때 함수 <strong>F</strong>는 GNN layer로 바라볼 수 있고, parameter는 layer별로 지정되는 것을 볼 수 있다. 또한 layer는 자연수의 범위 내에서 정의됨을 확인할 수 있다.</p>
+<center><img src="https://user-images.githubusercontent.com/68312164/174891497-56ca0974-2521-4e6a-bfb4-5a75b5bf53b8.png" width="400" height="100"></center>
+
+<p>다음으로는 앞서 Motivation에서 살펴봤듯, residual connection을 좌변으로 넘겨서 이 term을 변화량의 관점에서 해석한 뒤, 미분방정식을 새롭게 만들어내었을 때 비로소 우리는 ‘<strong>Graph Neural Ordinary Differential Equation(GDE)</strong>‘의 초기값 문제(IVP)관점에서 아래와 같이 정의할 수 있게 된다. 중요한 점은, 위의 식과 달리 우리는 초기값을 가진 미분방정식을 Formulation 했다는 점이고, layer가 자연수 범위가 아닌 <strong>실수 범위</strong> 에서 정의된다는 점에 주목할 필요가 있다.</p>
+<center><img src="https://user-images.githubusercontent.com/68312164/174891498-abf52002-9007-41a1-a8be-fd8eaffc2719.png" width="400" height="100"></center>
+
+<p>미분방정식을 Formulation하는 것도 중요하지만 또 하나의 중요한 점은 미분방정식의 해가 존재하는지 그리고 그 해가 유일한지 <code class="language-plaintext highlighter-rouge">Well-posedness</code>를 따져볼 필요가 있다. 우리는 이때, 적분구간을 [0,1]로 설정한 뒤, Hidden state에서의 <strong>Lipshitz Continuity</strong>, layer의 index로 해석될 수 있는 위의 식의 s에서의 <strong>Uniform Continuity</strong>를 조건으로 부여해줌으로써 해당 구간 내에서의 해(hidden representation)의 유일성을 정의할 수 있게 된다. 최종적으로 위의 hidden representation을 적분함으로써 우리는 GDE의 output을 아래와 같이 나타낼 수 있게된다. 이때, 적분구간을 [0,1]로 둔다고 하면, 0에서의 적분값은 정의한 미분방정식의 초기값과 만나 상쇄되게 된다.</p>
+<center><img src="https://user-images.githubusercontent.com/68312164/174891500-a6e19194-c6c3-4cc3-868e-b30756718f47.png" width="400" height="100"></center>
+
+<h3 id="2-gde-on-static-models">(2) <strong>GDE on Static Models</strong>
+</h3>
+
+<p>우리는 GDE를 2가지 관점에서 해석할 수 있게 되는데 먼저 time에 variant하지 않은 static 모델에서 정의할 수 있다. Residual connection을 가진 GCN은 아래와 같이 나타낼 수 있게 되고 해당 식을 여태 위에서의 과정과 같이 미분 관점에서 해석하게 되면 아래 두 번째 식으로 나타낼 수 있게 된다. 이 때, L은 Laplacian Matrix를 나타내고 Hidden Representation을 나타내는 함수 <strong>F</strong> 는 모델링의 자유도를 가지는데 주로 Multilayer Convolution 등으로 표현할 수 있게 된다. 이 때, 우리는 GCN을 베이스로 하였기에 <code class="language-plaintext highlighter-rouge">Graph Convolutional Differential Equation, GCDE</code>로 GDE를 부를 수 있게된다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/68312164/174891503-81c3f455-4d2e-4c8c-be41-62324d0950fe.png" width="400" height="70">
+<img src="https://user-images.githubusercontent.com/68312164/174891506-d77b1b34-c226-44a1-bbc5-d00da4f33b0a.png" width="680" height="80"></p>
+
+<h3 id="3-gde-on-spatio-temporal-models">(3) <strong>GDE on Spatio-Temporal Models</strong>
+</h3>
+
+<p>다음으로는, 시간에 따라 variant한, autoregressive 속성을 가진 Spatio-Temporal 관점에서 GDE를 정의할 수 있다. 시간의 축을 포함시켜줌으로써, 우리는 depth domain을 time domain과 동치시킬 수 있다(RNN에서 layer를 쌓는다는 것은 그 만큼 더 많은 time input을 고려해준다는 의미와 상통된다고 생각하면 된다). 따라서 특정 시간에서 시간 변화량만큼 적분을 해줌으로써 우리는 Hidden representation을 업데이트할 수 있게 된다. 이 때 역시, 미분방정식의 관점에서 이를 해석할 수 있게되고, 시간 구간 내에서의 dynamic를 parameter <img src="https://latex.codecogs.com/svg.image?%5Cboldsymbol%7B%5Ctheta%7D" alt=""> 를 가진 하나의 함수로서 나타낼 수 있게된다. GDE Framework에서 아래 등장하는, F, G, K는 <strong>GNN-operator</strong> 혹은 GNN layer로 생각할 수 있다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/68312164/174891508-881695d6-9a86-429d-b20e-55cbc8fbbb03.png" width="400" height="80">
+<img src="https://user-images.githubusercontent.com/68312164/174891512-3d2df150-6393-4e24-bcff-579cda78bc13.png" width="400" height="100"></p>
+
+<h2 id="4-experiment"><strong>4. Experiment</strong></h2>
+
+<p>다음은 GDE의 효과성을 입증하기 위한 실험이다. 먼저 실험은 크게 3파트, <code class="language-plaintext highlighter-rouge">(1) Semi-supervised node classification</code>, <code class="language-plaintext highlighter-rouge">(2) Trajectory extrapolation task</code>, <code class="language-plaintext highlighter-rouge">(3) Traffic forecasting</code> 에서 진행되었다. 먼저 Overall하게 각 task에서 사용한 Dataset과 Baseline 그리고 Evaluation Metric을 정리하면 아래와 같이 나타낼 수 있다.</p>
+
+<h3 id="experiment-setup"><strong>Experiment setup</strong></h3>
+
+<ul>
+  <li>Dataset
+    <ul>
+      <li>(1): Graph 분야에서 Benchmark dataset으로 꼽히는 Cora, Citeseer, Pubmed 기준으로 실험을 진행하였다. 특히 GDE의 Static 버전에서 실험을 진행하였다.</li>
+      <li>(2): 시간에 따른 dynamical behavior를 효과적으로 살펴보기 위해 multi-particle system을 토대로 하였고 시간의 흐름에 따라 입자의 position, velocity의 trajectory가 어떻게 그려지는지 살펴보았다.</li>
+      <li>(3): Undersampled 버전의 PeMS 데이터 셋을 활용하였고 이는 228개의 센서 스테이션이 5분의 주기로 교통량의 정보를 담고있는 데이터 셋이다.</li>
+    </ul>
+  </li>
+  <li>baseline
+    <ul>
+      <li>(1): 기존의 GCN, GCDE가 가장 효과적이었을 때의 hyperparmeter 셋팅인 GCN* 을 사용하였고, 대표적인 Numerical Solver인 Runge-Kutta 2,4 그리고 Dormand-Prince를 비교하였다.</li>
+      <li>(2): 다른 모델과의 비교에 초점을 두기보다는 position, velocity에서의 trajectory를 중점적으로 살펴보았다.</li>
+      <li>(3): 시간에 따른 변화를 잘 모델링할 수 있는 기존의 GRU, 그리고 Graph Convolution을 접목시킨 GCGRU와 중점적으로 비교하였다.</li>
+    </ul>
+  </li>
+  <li>Evaluation Metric
+    <ul>
+      <li>(1): Node classification task에서 주로 활용되는 test accuracy를 기반으로 하였다.</li>
+      <li>(2): 업데이트 하는 과정에서 Mean Squared Error, MSE를 활용하였고, Figure로는 Trajectory를 제시하였다.</li>
+      <li>(3): Root Mean Squared Error (RMSE)와 Mean Absolute Percentage Error (MAPE)를 활용하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="result"><strong>Result</strong></h3>
+
+<p><strong>(1) Semi-supervised node classification</strong></p>
+<center><img src="https://user-images.githubusercontent.com/68312164/174891515-bd91c64e-4b1d-4abb-988c-c527b0ac46e9.png" width="600" height="300"></center>
+
+<p>위의 Figure는 Node embedding 의 trajectory를 2차원으로 나타낸 그림인데 색은 node의 label이고 적분 구간이 종료점에 가까워질때까지 trajectories가 divergent하고 그말인 즉슨, label별로 update가 잘 일어나고 있음을 나타낸다.</p>
+<center><img src="https://user-images.githubusercontent.com/68312164/174891518-82fa904a-cc09-439d-b854-664591047e85.png" width="600" height="250"></center>
+
+<p>기존의 GCN, 그리고 가장 좋았던 hyperparmeter 셋팅을 바탕으로 한 GCN* 와의 비교 그리고 numerical solver의 variant로 비교를 한 Test accuracy이다. 성능이 압도하진 않지만 기존의 vanilla GCN 보다는 우월함을 드러내는 Table로 해석될 수 있다.</p>
+
+<p><strong>(2) Trajectory extrapolation task</strong></p>
+<center><img src="https://user-images.githubusercontent.com/68312164/174891525-68dab104-4fb7-44cd-8353-08f6d1cc4c3c.png" width="600" height="300"></center>
+
+<p>이 task는 Extrapolation에서의 GDE의 퍼포먼스를 중점적으로 테스트한 결과인데, 변위 그리고 속도의 관점에서 입자의 trajectory를 plotting 한 결과이다. 총 10개의 particle system에서 측정하였기에 색은 총 10개의 variant한 입자를 나타내며, 각 입자별로 입자의 변위 그리고 속도 변화를 잘 표현해내고 있음을 확인할 수 있다.</p>
+
+<p><strong>(3) Traffic forecasting</strong></p>
+<center><img src="https://user-images.githubusercontent.com/68312164/174891521-b0832269-f9f4-495e-bb00-fb291637b2c7.png" width="700" height="100"></center>
+
+<p>Model에서의 퍼센티지는 Undersample 관점에서 해석하여, training 으로 활용한 데이터셋의 비율이다. 상대적으로 Harsh한 Undersampling 환경에서도 GCDE-GUR의 우월함을 확인할 수 있다. 앞선 static 실험에서와 달리 성능 향상의 폭이 유의미한 것을 확인할 수 있는데, 이로 유추해보아 확실히 time domain, continuous domain에서의 GDE의 효과성을 살펴볼 수 있다.</p>
+
+<h2 id="5-conclusion"><strong>5. Conclusion</strong></h2>
+
+<p>이로써 우리는 GNN과 Neural ODE가 처음으로 접목된, GDE를 살펴볼 수 있다. 오늘의 Paper는 퍼스트펭귄의 역할로서의 유의미함이 크고, 어떻게 Graph domain에 Neural ODE를 효과적으로 접목시킬 수 있는지에 대한 고민을 바탕으로 발전된 논문이다. 세줄 요약을 해보면 다음과 같다.</p>
+
+<ul>
+  <li>(1) GNN에 Neural ODE를 접목시킨 초창기 연구</li>
+  <li>(2) Graph Neuarl Ordinary Differential Equation, GDE에 대한 정의</li>
+  <li>(3) GDE에 대한 분류 - Static, Spatio-Temporal</li>
+</ul>
+
+<p>그리고, 필자는 이렇게 글을 마무리 짓고 싶다.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">GNN with Differential Equations? Way to go!</code></strong></p>
+
+<h2 id="author-information"><strong>Author Information</strong></h2>
+
+<ul>
+  <li>Sukwon Yun (윤석원)
+    <ul>
+      <li>Master Student in ISySE, KAIST (<a href="http://dsail.kaist.ac.kr" target="_blank" rel="noopener noreferrer">DSAIL</a>)</li>
+      <li>Interested in <strong>GNN, Differential Equations on NN, Long-Tail Problem on NN</strong>
+</li>
+      <li>Contact: swyun@kaist.ac.kr</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="6-reference--additional-materials"><strong>6. Reference &amp; Additional materials</strong></h2>
+
+<ul>
+  <li>Paper: <a href="https://arxiv.org/abs/1911.07532" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/1911.07532</a>
+</li>
+  <li>Code: <a href="https://github.com/Zymrael/gde" target="_blank" rel="noopener noreferrer">https://github.com/Zymrael/gde</a>
+</li>
+  <li>Neural ODE: <a href="https://arxiv.org/abs/1806.07366" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/1806.07366</a>
+    <ul>
+      <li><strong>&lt; 도움이 되는 영상자료 모음 &gt;</strong></li>
+      <li>직관적 이해: <a href="https://www.youtube.com/watch?v=AD3K8j12EIE" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=AD3K8j12EIE</a>
+</li>
+      <li>논문의 key point: <a href="https://www.youtube.com/watch?v=jltgNGt8Lpg" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=jltgNGt8Lpg</a>
+</li>
+      <li>최윤재 교수님 강의자료: <a href="https://www.youtube.com/watch?v=sIFnARdTVvE\&amp;t=3046s" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=sIFnARdTVvE\&amp;t=3046s</a>
+</li>
+      <li>Adjoint Sensitivity Method: <a href="https://www.youtube.com/watch?v=k6s2G5MZv-I\&amp;t=512s" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=k6s2G5MZv-I\&amp;t=512s</a>
+</li>
+    </ul>
+  </li>
+  <li>GCN: <a href="https://arxiv.org/abs/1609.02907" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/1609.02907</a>
+    <ul>
+      <li>PDF 자료: <a href="https://github.com/SukwonYun/GNN-Papers" target="_blank" rel="noopener noreferrer">https://github.com/SukwonYun/GNN-Papers</a>
+</li>
+      <li>윤훈상 연구원님 자료: <a href="https://www.youtube.com/watch?v=F-JPKccMP7k\&amp;t=635s" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=F-JPKccMP7k\&amp;t=635s</a>
+</li>
+    </ul>
+  </li>
+  <li>Github Review (본문 사진이 잘 안보일 경우): <a href="https://github.com/SukwonYun/awesome-reviews-kaist/blob/2022-Spring/paper-review/2022-spring/AAAI-2020-GDE.md" target="_blank" rel="noopener noreferrer">https://github.com/SukwonYun/awesome-reviews-kaist/blob/2022-Spring/paper-review/2022-spring/AAAI-2020-GDE.md</a>
+</li>
+</ul>
+
+      </d-article>
+
+      <d-appendix>
+        <d-footnote-list></d-footnote-list>
+        <d-citation-list></d-citation-list>
+      </d-appendix>
+
+    </div>
+
+    <!-- Comments -->
+    <d-comment>
+      
+
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+      var disqus_config = function () {
+      this.page.url = "https://yunhak0.github.io/blog/2022/GDE/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/blog/2022/GDE/"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://yunhak0-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+
+      
+    </d-comment>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2023 Sukwon  Yun. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+
+      </div>
+    </footer>
+  
+    <script id="dsq-count-scr" src="//yunhak0-github-io.disqus.com/count.js" async></script>
+
+  </body>
+
+  <d-bibliography src="/assets/bibliography/">
+  </d-bibliography>
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js" integrity="sha256-l/1pMF/+J4TThfgARS6KwWrk/egwuVvhRzfLAMQ6Ds4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha256-SyTu6CwrfOhaznYZPoolVw2rxoY7lKYKQvqbtqN93HI=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+  <script src="/assets/js/distillpub/overrides.js"></script>
+
+</html>
